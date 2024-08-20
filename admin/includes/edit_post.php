@@ -21,14 +21,14 @@
         echo $post_date = $row['post_date'];
     }
     if(isset($_POST['update_post'])){
-        $post_author = $row['post_author'];
-        $post_title = $row['post_title'];
-        $post_category_id = $row['post_category_id'];
-        $post_status = $row['post_status'];
+        $post_author = mysqli_real_escape_string( $connection, $_POST['post_author']);
+        $post_title = mysqli_real_escape_string( $connection, $_POST['post_title']);
+        $post_category_id = mysqli_real_escape_string( $connection, $_POST['post_category_id']);
+        $post_status = mysqli_real_escape_string($connection, $_POST['post_status']);
         $post_image = $_FILES['image']['name'];
         $post_image_temp = $_FILES['image']['temp_name'];
-        $post_content = $_POST['post_content'];
-        $post_tags = $_POST['post_tag'];
+        $post_content = mysqli_real_escape_string( $connection, $_POST['post_content']);
+        $post_tags = mysqli_real_escape_string( $connection, $_POST['post_tag']);
 
         move_uploaded_file($post_image_temp, "../images/$post_image");
 
