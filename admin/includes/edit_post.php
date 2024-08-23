@@ -50,7 +50,7 @@
         $query .= "post_status = '{$post_status}', ";
         $query .= "post_tag = '{$post_tags}', ";
         $query .= "post_content = '{$post_content}', ";
-        $query .= "post_image = '{$post_image}', ";
+        $query .= "post_image = '{$post_image}' ";
         $query .= "WHERE post_id = '{$the_post_id}' ";
 
         $update_post = mysqli_query($connection, $query);

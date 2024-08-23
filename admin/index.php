@@ -16,8 +16,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Blank Page
-                            <small>Subheading</small>
+                            Wellcome to Admin
+                            
+                            <small><?php echo $_SESSION['username']; ?></small>
                         </h1>
                         <ol class="breadcrumb">
 
